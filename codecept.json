@@ -1,0 +1,36 @@
+{
+  "output": "./output",
+  "helpers": {
+    "Puppeteer": {
+      "url": "https://wikium.ru/",
+      "waitForAction": 1500,
+      "windowSize": "1280x680",
+      "fullPageScreenshots": true,
+      "uniqueScreenshotNames": true,
+      "waitForNavigation": [
+        "domcontentloaded",
+        "networkidle0"
+      ]
+    },
+    "MyPuppeteer": {
+      "require": "./mypuppeteer_helper.js"
+    }
+  },
+  "include": {
+    "mainPage": "./pages/pageobject.js",
+    "generateRandomEmailStep": "./steps/generate_email.js"
+  },
+  "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    }
+  },
+  "tests": "./*_test.js",
+  "timeout": 10000,
+  "name": "wikium_test_codeceptjs"
+}
