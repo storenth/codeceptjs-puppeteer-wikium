@@ -19,5 +19,10 @@ E2E testing app wikium.ru with CodeceptJS and Puppeteer helper
     ```
 #### defaults:
 * tests runs inside headless Chrome
-* custom coverage based on used bytes of the each .js included
+* custom coverage based on used bytes of the each _.js_ included
 * to extend with istanbul report further work required
+#### features:
+* Data Driven for N-wise testing
+* Page Object to avoid code duplication
+* iframe and modal handle
+* low level interactions such as keys press

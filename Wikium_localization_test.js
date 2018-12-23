@@ -15,7 +15,7 @@ After((I) => {
 
 
 // DataDriven and PageObject model
-Data(["English"])
+Data(["English", "Русский"])
 .Scenario('test check language @lang', (I, mainPage, current) => {
     I.say('I am going to change language');
     mainPage.changeLanguage(current);
